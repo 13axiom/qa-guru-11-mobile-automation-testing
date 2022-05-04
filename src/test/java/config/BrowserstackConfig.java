@@ -4,8 +4,7 @@ import org.aeonbits.owner.Config;
 
 import static org.aeonbits.owner.Config.*;
 
-@Sources({"file:/tmp/browserstack.properties",
-        "classpath:config/browserstack.properties"})
+@Sources({"classpath:config/browserstack.properties"})
 public interface BrowserstackConfig extends Config {
 
     @Key("app")
