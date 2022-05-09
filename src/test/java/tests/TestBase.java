@@ -1,4 +1,4 @@
-package emaulator;
+package tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
@@ -15,13 +15,15 @@ import static io.qameta.allure.Allure.step;
 
 public class TestBase {
 
+    private static String deviceHost = System.getProperty("deviceHost");
     @BeforeAll
     public static void setup() {
         addListener("AllureSelenide", new AllureSelenide());
 
-        Configuration.browser = drivers.EmulatorMobileDriver.class.getName();
+            Configuration.browser = drivers.MobileDriverSet.getDeviceHost(deviceHost);
 //        Configuration.startMaximized = false;
-        Configuration.browserSize = null;
+            Configuration.browserSize = null;
+
     }
 
     @BeforeEach
@@ -31,10 +33,15 @@ public class TestBase {
 
     @AfterEach
     public void afterEach() {
+
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
 
         step("Close driver", Selenide::closeWebDriver);
-    }
 
+        if (deviceHost.equals("browserstack")) {
+            String sessionId = getSessionId();
+            Attach.video(sessionId);
+        }
+    }
 }
