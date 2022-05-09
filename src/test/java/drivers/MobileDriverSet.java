@@ -9,7 +9,7 @@ public class MobileDriverSet {
         if (deviceHost.equals("emulator")) {
             return drivers.EmulatorMobileDriver.class.getName();
         }
-        if (deviceHost.equals("real_device")) {
+        if (deviceHost.equals("real")) {
             return drivers.EmulatorMobileDriver.class.getName();
         }
         throw new RuntimeException("Device wasn't selected");
