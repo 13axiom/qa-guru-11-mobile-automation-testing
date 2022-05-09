@@ -33,6 +33,7 @@ public class TestBase {
 
     @AfterEach
     public void afterEach() {
+        String sessionId = getSessionId();
 
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
@@ -40,7 +41,6 @@ public class TestBase {
         step("Close driver", Selenide::closeWebDriver);
 
         if (deviceHost.equals("browserstack")) {
-            String sessionId = getSessionId();
             Attach.video(sessionId);
         }
     }
