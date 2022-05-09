@@ -11,7 +11,6 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static io.qameta.allure.Allure.step;
-import static java.lang.Thread.sleep;
 
 public class AndroidTestsHW extends TestBase {
 

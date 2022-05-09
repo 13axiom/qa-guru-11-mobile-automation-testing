@@ -16,13 +16,14 @@ import static io.qameta.allure.Allure.step;
 public class TestBase {
 
     private static String deviceHost = System.getProperty("deviceHost");
+
     @BeforeAll
     public static void setup() {
         addListener("AllureSelenide", new AllureSelenide());
 
-            Configuration.browser = drivers.MobileDriverSet.getDeviceHost(deviceHost);
+        Configuration.browser = drivers.MobileDriverSet.getDeviceHost(deviceHost);
 //        Configuration.startMaximized = false;
-            Configuration.browserSize = null;
+        Configuration.browserSize = null;
 
     }
 

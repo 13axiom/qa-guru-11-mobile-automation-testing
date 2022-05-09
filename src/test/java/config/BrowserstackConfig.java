@@ -2,7 +2,7 @@ package config;
 
 import org.aeonbits.owner.Config;
 
-import static org.aeonbits.owner.Config.*;
+import static org.aeonbits.owner.Config.Sources;
 
 @Sources({"classpath:config/browserstack.properties"})
 public interface BrowserstackConfig extends Config {
@@ -24,6 +24,7 @@ public interface BrowserstackConfig extends Config {
 
     @Key("name")
     String name();
+
     @Key("browser_stack_url")
     String browserstackUrl();
 }

@@ -13,10 +13,10 @@ import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import static config.Project.emulatorConfig;
+import static config.Project.realDeviceConfig;
 import static org.apache.commons.io.FileUtils.copyInputStreamToFile;
 
-public class EmulatorMobileDriver implements WebDriverProvider {
+public class RealMobileDeviceDriver implements WebDriverProvider {
 
     @Override
     public WebDriver createDriver(Capabilities capabilities) {
@@ -25,15 +25,15 @@ public class EmulatorMobileDriver implements WebDriverProvider {
         UiAutomator2Options options = new UiAutomator2Options();
         options.merge(capabilities);
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
-        options.setPlatformName(emulatorConfig.platformName());
-        //options.setDeviceName(emulatorConfig.deviceName()); //realdevice
-        options.setDeviceName(emulatorConfig.deviceName()); //emulator
-        options.setPlatformVersion(emulatorConfig.platformVersion());
+        options.setPlatformName(realDeviceConfig.platformName());
+        options.setDeviceName(realDeviceConfig.deviceName()); //realdevice
+        //options.setDeviceName(realDeviceConfig.deviceName()); //emulator
+        options.setPlatformVersion(realDeviceConfig.platformVersion());
         options.setApp(app.getAbsolutePath());
-        options.setLocale(emulatorConfig.locale());
-        options.setLanguage(emulatorConfig.language());
-        options.setAppPackage(emulatorConfig.appPackage());
-        options.setAppActivity(emulatorConfig.appActivity());
+        options.setLocale(realDeviceConfig.locale());
+        options.setLanguage(realDeviceConfig.language());
+        options.setAppPackage(realDeviceConfig.appPackage());
+        options.setAppActivity(realDeviceConfig.appActivity());
 
         return new AndroidDriver(getAppiumServerUrl(), options);
     }
