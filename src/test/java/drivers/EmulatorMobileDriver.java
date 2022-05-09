@@ -1,6 +1,7 @@
 package drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
+import config.Project;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.remote.AutomationName;
@@ -13,6 +14,7 @@ import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import static config.Project.*;
 import static org.apache.commons.io.FileUtils.copyInputStreamToFile;
 
 public class EmulatorMobileDriver implements WebDriverProvider {
@@ -24,15 +26,15 @@ public class EmulatorMobileDriver implements WebDriverProvider {
         UiAutomator2Options options = new UiAutomator2Options();
         options.merge(capabilities);
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
-        options.setPlatformName("Android");
+        options.setPlatformName(emulatorConfig.platformName());
         //options.setDeviceName("RFCR90ZMNQP");
-        options.setDeviceName("Pixel_4_API_30");
-        options.setPlatformVersion("11.0");
+        options.setDeviceName(emulatorConfig.deviceName());
+        options.setPlatformVersion(emulatorConfig.platformVersion());
         options.setApp(app.getAbsolutePath());
-        options.setLocale("en");
-        options.setLanguage("en");
-        options.setAppPackage("org.wikipedia.alpha");
-        options.setAppActivity("org.wikipedia.main.MainActivity");
+        options.setLocale(emulatorConfig.locale());
+        options.setLanguage(emulatorConfig.language());
+        options.setAppPackage(emulatorConfig.appPackage());
+        options.setAppActivity(emulatorConfig.appActivity());
 
         return new AndroidDriver(getAppiumServerUrl(), options);
     }
