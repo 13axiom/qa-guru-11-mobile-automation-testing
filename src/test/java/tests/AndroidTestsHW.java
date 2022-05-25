@@ -11,6 +11,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static io.qameta.allure.Allure.step;
+import static java.lang.Thread.sleep;
 
 public class AndroidTestsHW extends TestBase {
 
@@ -46,10 +47,10 @@ public class AndroidTestsHW extends TestBase {
 
         step("1st page of introduction: checking that page has button for adding new languages", () -> {
 
-            /*$$(AppiumBy.id("android.widget.TextView")).findBy(text("ADD OR EDIT LANGUAGES")).
+            $$(AppiumBy.id("android.widget.TextView")).findBy(text("ADD OR EDIT LANGUAGES")).
                     shouldHave(attribute("displayed", "true"));
             $(AppiumBy.id("org.wikipedia.alpha:id/addLangContainer")).closest("android.widget.TextView").
-                    shouldHave(text("ADD OR EDIT LANGUAGES"));*/
+                    shouldHave(text("ADD OR EDIT LANGUAGES"));
 
         });
 
