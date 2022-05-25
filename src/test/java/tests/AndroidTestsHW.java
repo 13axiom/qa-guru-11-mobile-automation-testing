@@ -51,7 +51,7 @@ public class AndroidTestsHW extends TestBase {
              //       shouldHave(attribute("displayed", "true"));
            // $(AppiumBy.id("org.wikipedia.alpha:id/addLangContainer")).closest("android.widget.TextView").
              //       shouldHave(text("ADD OR EDIT LANGUAGES"));
-            $(AppiumBy.id("org.wikipedia.alpha:id/addLangContainer")).last().
+            $$(AppiumBy.id("org.wikipedia.alpha:id/addLangContainer")).last().
                     shouldHave(text("ADD OR EDIT LANGUAGES"));
             //        $(AppiumBy.id("org.wikipedia.alpha:id/addLangContainer")).click();
 
