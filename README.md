@@ -89,5 +89,7 @@ gradle clean test -DdeviceHost=browserstack / emulation / real
 
 > A video is attached to each test in the report.
 
-https://user-images.githubusercontent.com/84909251/170564736-e028410a-44fb-40dd-bbb8-9b3a23c096f2.mp4
+
+https://user-images.githubusercontent.com/84909251/170564995-992b9b10-2493-4b67-9eb1-52c0ca4a2c84.mp4
+
 
