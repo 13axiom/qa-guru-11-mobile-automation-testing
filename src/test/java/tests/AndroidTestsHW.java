@@ -178,7 +178,7 @@ public class AndroidTestsHW extends TestBase {
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.NORMAL)
     @Feature("Wikipedia -> Introducing page")
-    @DisplayName("alidation of design of introduction 4th page")
+    @DisplayName("Validation of design of introduction 4th page")
     @Description("Mobile testing #5")
     void validateDIntroductionFourthPageDesign() {
 
