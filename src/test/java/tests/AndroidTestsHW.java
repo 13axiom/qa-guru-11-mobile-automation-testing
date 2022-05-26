@@ -1,8 +1,10 @@
 package tests;
 
 import io.appium.java_client.AppiumBy;
+import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
@@ -16,8 +18,13 @@ import static java.lang.Thread.sleep;
 public class AndroidTestsHW extends TestBase {
 
     @Test
-    @Tag("emulator_hw")
-    @DisplayName("id: 1. Search test")
+    @Tags({@Tag("browserstack"),@Tag("wikipedia"),@Tag("search")})
+    @Owner("DmitriyTQC")
+    @Severity(SeverityLevel.NORMAL)
+    @Feature("Wikipedia -> Search")
+    @DisplayName("Search test")
+    @Description("Mobile testing #1")
+
     void searchTest() {
         step("Skip introduction", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")).click();
@@ -31,9 +38,14 @@ public class AndroidTestsHW extends TestBase {
                         .shouldHave(sizeGreaterThan(0)));
     }
 
+
     @Test
-    @Tag("emulator_hw")
-    @DisplayName("id: 2. Validation of design of introduction 1st page")
+    @Tags({@Tag("browserstack"),@Tag("wikipedia"),@Tag("introducing_page")})
+    @Owner("DmitriyTQC")
+    @Severity(SeverityLevel.NORMAL)
+    @Feature("Wikipedia -> Introducing page")
+    @DisplayName("Validation of design of introduction 1st page")
+    @Description("Mobile testing #2")
     void validateIntroductionFirstPageDesign() {
 
         step("1st page of introduction: checking header", () -> {
@@ -62,8 +74,12 @@ public class AndroidTestsHW extends TestBase {
     }
 
     @Test
-    @Tag("emulator_hw")
-    @DisplayName("id: 3. Validation of design of introduction 2nd page")
+    @Tags({@Tag("browserstack"),@Tag("wikipedia"),@Tag("introducing_page")})
+    @Owner("DmitriyTQC")
+    @Severity(SeverityLevel.NORMAL)
+    @Feature("Wikipedia -> Introducing page")
+    @DisplayName("Validation of design of introduction 2nd page")
+    @Description("Mobile testing #3")
     void validateDIntroductionSecondPageDesign() {
 
         String secondaryText = "Dive down the Wikipedia rabbit hole with a constantly updating Explore feed. " +
@@ -106,8 +122,12 @@ public class AndroidTestsHW extends TestBase {
     }
 
     @Test
-    @Tag("emulator_hw")
-    @DisplayName("id: 4. Validation of design of introduction 3rd page")
+    @Tags({@Tag("browserstack"),@Tag("wikipedia"),@Tag("introducing_page")})
+    @Owner("DmitriyTQC")
+    @Severity(SeverityLevel.NORMAL)
+    @Feature("Wikipedia -> Introducing page")
+    @DisplayName("Validation of design of introduction 3rd page")
+    @Description("Mobile testing #4")
     void validateDIntroductionThirdPageDesign() {
 
         String secondaryText = "You can make reading lists from articles you want to read later, even when you’re offline. " +
@@ -153,8 +173,12 @@ public class AndroidTestsHW extends TestBase {
     }
 
     @Test
-    @Tag("emulator_hw")
-    @DisplayName("id: 5. Validation of design of introduction 4th page")
+    @Tags({@Tag("browserstack"),@Tag("wikipedia"),@Tag("introducing_page")})
+    @Owner("DmitriyTQC")
+    @Severity(SeverityLevel.NORMAL)
+    @Feature("Wikipedia -> Introducing page")
+    @DisplayName("alidation of design of introduction 4th page")
+    @Description("Mobile testing #5")
     void validateDIntroductionFourthPageDesign() {
 
         String secondaryText = "Help make the app better by letting us know how you use it. " +
