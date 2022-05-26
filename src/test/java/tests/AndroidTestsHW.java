@@ -24,7 +24,7 @@ public class AndroidTestsHW extends TestBase {
         });
         step("Type search", () -> {
             $(AppiumBy.accessibilityId("Search Wikipedia")).click();
-            $(AppiumBy.id("org.wikipedia.alpha:id/search_src_text")).setValue("Appium");
+            $(AppiumBy.id("org.wikipedia.alpha:id/search_src_text")).setValue("Software testing");
         });
         step("Verify content found", () ->
                 $$(AppiumBy.id("org.wikipedia.alpha:id/page_list_item_title"))
@@ -47,13 +47,10 @@ public class AndroidTestsHW extends TestBase {
 
         step("1st page of introduction: checking that page has button for adding new languages", () -> {
 
-           // $$(AppiumBy.id("android.widget.TextView")).findBy(text("ADD OR EDIT LANGUAGES")).
-             //       shouldHave(attribute("displayed", "true"));
-           // $(AppiumBy.id("org.wikipedia.alpha:id/addLangContainer")).closest("android.widget.TextView").
-             //       shouldHave(text("ADD OR EDIT LANGUAGES"));
-            $$(AppiumBy.id("org.wikipedia.alpha:id/addLangContainer")).last().
+            $(AppiumBy.id("org.wikipedia.alpha:id/addLangContainer")).
+                    shouldHave(attribute("displayed", "true"));
+            $(AppiumBy.id("org.wikipedia.alpha:id/addLangContainer")).$("android.widget.TextView").
                     shouldHave(text("ADD OR EDIT LANGUAGES"));
-            //        $(AppiumBy.id("org.wikipedia.alpha:id/addLangContainer")).click();
 
 
         });
