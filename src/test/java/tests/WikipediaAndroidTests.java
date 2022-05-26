@@ -13,18 +13,16 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static io.qameta.allure.Allure.step;
-import static java.lang.Thread.sleep;
 
-public class AndroidTestsHW extends TestBase {
+public class WikipediaAndroidTests extends TestBase {
 
     @Test
-    @Tags({@Tag("browserstack"),@Tag("wikipedia"),@Tag("search")})
+    @Tags({@Tag("browserstack"), @Tag("wikipedia"), @Tag("search")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.NORMAL)
     @Feature("Wikipedia -> Search")
     @DisplayName("Search test")
     @Description("Mobile testing #1")
-
     void searchTest() {
         step("Skip introduction", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")).click();
@@ -40,7 +38,7 @@ public class AndroidTestsHW extends TestBase {
 
 
     @Test
-    @Tags({@Tag("browserstack"),@Tag("wikipedia"),@Tag("introducing_page")})
+    @Tags({@Tag("browserstack"), @Tag("wikipedia"), @Tag("introducing_page")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.NORMAL)
     @Feature("Wikipedia -> Introducing page")
@@ -61,7 +59,7 @@ public class AndroidTestsHW extends TestBase {
 
             $(AppiumBy.id("org.wikipedia.alpha:id/addLangContainer")).
                     shouldHave(attribute("displayed", "true"));
-           // $(AppiumBy.id("org.wikipedia.alpha:id/addLangContainer")).$("android.widget.TextView")
+            // $(AppiumBy.id("org.wikipedia.alpha:id/addLangContainer")).$("android.widget.TextView")
             $(AppiumBy.id("org.wikipedia.alpha:id/addLangContainer")).$(AppiumBy.className("android.widget.TextView"))
                     .shouldHave(text("ADD OR EDIT LANGUAGES"));
 
@@ -75,7 +73,7 @@ public class AndroidTestsHW extends TestBase {
     }
 
     @Test
-    @Tags({@Tag("browserstack"),@Tag("wikipedia"),@Tag("introducing_page")})
+    @Tags({@Tag("browserstack"), @Tag("wikipedia"), @Tag("introducing_page")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.NORMAL)
     @Feature("Wikipedia -> Introducing page")
@@ -123,7 +121,7 @@ public class AndroidTestsHW extends TestBase {
     }
 
     @Test
-    @Tags({@Tag("browserstack"),@Tag("wikipedia"),@Tag("introducing_page")})
+    @Tags({@Tag("browserstack"), @Tag("wikipedia"), @Tag("introducing_page")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.NORMAL)
     @Feature("Wikipedia -> Introducing page")
@@ -174,7 +172,7 @@ public class AndroidTestsHW extends TestBase {
     }
 
     @Test
-    @Tags({@Tag("browserstack"),@Tag("wikipedia"),@Tag("introducing_page")})
+    @Tags({@Tag("browserstack"), @Tag("wikipedia"), @Tag("introducing_page")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.NORMAL)
     @Feature("Wikipedia -> Introducing page")
