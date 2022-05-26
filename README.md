@@ -24,7 +24,7 @@
 <a href="https://www.jenkins.io/"><img src="images/logo/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>
 <a href="https://telegram.org/?setln=en/"><img src="images/logo/Telegram.svg" width="50" height="50"  alt="Telegram"/></a>
 <a href="https://www.browserstack.com/app-live/"><img src="images/logo/browserstack.png" width="50" height="50"  alt="Browserstack"/></a>
-<a href="https://appium.io/"><img src="images/logo/appium.png" width="50" height="50"  alt="Appium"/></a>
+<a href="https://appium.io/"><img src="images/logo/appium.png" width="100" height="50"  alt="Appium"/></a>
 </p>
 
 
@@ -88,3 +88,6 @@ gradle clean test -DdeviceHost=browserstack / emulation / real
 ## :point_up_2: Example of test execution
 
 > A video is attached to each test in the report.
+
+https://user-images.githubusercontent.com/84909251/170564736-e028410a-44fb-40dd-bbb8-9b3a23c096f2.mp4
+
