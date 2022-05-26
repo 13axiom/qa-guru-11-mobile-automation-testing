@@ -17,6 +17,7 @@ import static io.qameta.allure.Allure.step;
 public class WikipediaAndroidTests extends TestBase {
 
     @Test
+    @AllureId("10374")
     @Tags({@Tag("browserstack"), @Tag("wikipedia"), @Tag("search")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.NORMAL)
@@ -38,6 +39,7 @@ public class WikipediaAndroidTests extends TestBase {
 
 
     @Test
+    @AllureId("10373")
     @Tags({@Tag("browserstack"), @Tag("wikipedia"), @Tag("introducing_page")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.NORMAL)
@@ -73,6 +75,7 @@ public class WikipediaAndroidTests extends TestBase {
     }
 
     @Test
+    @AllureId("10376")
     @Tags({@Tag("browserstack"), @Tag("wikipedia"), @Tag("introducing_page")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.NORMAL)
@@ -121,6 +124,7 @@ public class WikipediaAndroidTests extends TestBase {
     }
 
     @Test
+    @AllureId("10375")
     @Tags({@Tag("browserstack"), @Tag("wikipedia"), @Tag("introducing_page")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.NORMAL)
@@ -172,6 +176,7 @@ public class WikipediaAndroidTests extends TestBase {
     }
 
     @Test
+    @AllureId("10372")
     @Tags({@Tag("browserstack"), @Tag("wikipedia"), @Tag("introducing_page")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.NORMAL)
