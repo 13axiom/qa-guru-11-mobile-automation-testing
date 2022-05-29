@@ -40,7 +40,7 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
 
         // Specify device and os_version for testing
         mutableCapabilities.setCapability("device", browserstackConfig.device());
-        mutableCapabilities.setCapability("os_version", browserstackConfig.osVersion());
+        mutableCapabilities.setCapability("os.version", browserstackConfig.osVersion());
 
         // Set other BrowserStack capabilities
         mutableCapabilities.setCapability("project", browserstackConfig.project());
