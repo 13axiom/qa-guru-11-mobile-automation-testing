@@ -1,27 +1,29 @@
 package config;
 
 import org.aeonbits.owner.Config;
+import static org.aeonbits.owner.Config.Sources;
 
-@org.aeonbits.owner.Config.Sources({"classpath:config/emulator.properties"})
+
+@Sources({"classpath:config/emulator.properties"})
 public interface EmulatorConfig extends Config {
-    @org.aeonbits.owner.Config.Key("PlatformName")
+    @Key("platform.name")
     String platformName();
 
-    @org.aeonbits.owner.Config.Key("DeviceName")
+    @Key("device.name")
     String deviceName();
 
-    @org.aeonbits.owner.Config.Key("PlatformVersion")
+    @Key("platform.version")
     String platformVersion();
 
-    @org.aeonbits.owner.Config.Key("Locale")
+    @Key("locale")
     String locale();
 
-    @org.aeonbits.owner.Config.Key("Language")
+    @Key("language")
     String language();
 
-    @org.aeonbits.owner.Config.Key("AppPackage")
+    @Key("app.package")
     String appPackage();
 
-    @org.aeonbits.owner.Config.Key("AppActivity")
+    @Key("app.activity")
     String appActivity();
 }

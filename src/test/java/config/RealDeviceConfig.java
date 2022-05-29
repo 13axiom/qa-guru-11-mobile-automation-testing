@@ -2,26 +2,28 @@ package config;
 
 import org.aeonbits.owner.Config;
 
-@Config.Sources({"classpath:config/real_device.properties"})
+import static org.aeonbits.owner.Config.Sources;
+
+@Sources({"classpath:config/real_device.properties"})
 public interface RealDeviceConfig extends Config {
-    @Key("PlatformName")
+    @Key("platform.name")
     String platformName();
 
-    @Key("DeviceName")
+    @Key("device.name")
     String deviceName();
 
-    @Key("PlatformVersion")
+    @Key("platform.version")
     String platformVersion();
 
-    @Key("Locale")
+    @Key("locale")
     String locale();
 
-    @Key("Language")
+    @Key("language")
     String language();
 
-    @Key("AppPackage")
+    @Key("app.package")
     String appPackage();
 
-    @Key("AppActivity")
+    @Key("app.activity")
     String appActivity();
 }

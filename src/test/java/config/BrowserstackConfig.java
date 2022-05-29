@@ -13,7 +13,7 @@ public interface BrowserstackConfig extends Config {
     @Key("device")
     String device();
 
-    @Key("os_version")
+    @Key("os.version")
     String osVersion();
 
     @Key("project")
@@ -25,6 +25,6 @@ public interface BrowserstackConfig extends Config {
     @Key("name")
     String name();
 
-    @Key("browser_stack_url")
+    @Key("browser.stack.url")
     String browserstackUrl();
 }
