@@ -65,7 +65,7 @@ html-report in Allure TestOps.*
 gradle clean test -DdeviceHost=browserstack / emulation / real 
 ```
 
-## <img width="4%" title="Allure TestOPS" src="images/logo/testops.png"> [Allure TestOps](https://allure.autotests.cloud/launch/11665) report
+## <img width="4%" title="Allure TestOPS" src="images/logo/testops.png"> [Allure TestOps](https://allure.autotests.cloud/launch/13139) report
 ### :pushpin: Overview dashboard
 
 <p align="center">
